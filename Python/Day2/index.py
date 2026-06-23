@@ -49,14 +49,25 @@
 
 
 
-user_name = input("Enter your username: ")
-password = input("Enter your password: ")
-saved_password = "122345"
-saved_username = "yesss"
+# user_name = input("Enter your username: ")
+# password = input("Enter your password: ")
+# saved_password = "122345"
+# saved_username = "yesss"
+#
+# if user_name == saved_username and password == saved_password:
+#     print("Welcome " + user_name)
+# else:
+#     print("Wrong name/password")
 
-if user_name == saved_username and password == saved_password:
-    print("Welcome " + user_name)
-else:
-    print("Wrong name/password")
 
-
+#atm
+amount = int(input("Enter the amount: "))
+atm_pin=int(input("Enter the atm pin: "))
+set=3242
+if amount%500==0 or amount%100==0 or amount%200==0 and atm_pin == set:
+    print(amount+" has been deducted.")
+    print("please collect your money")
+elif atm_pin!=set:
+    print("wrong pin")
+elif amount%500!=0 or amount%100!=0 or amount%200==0:
+    print("amount should be in 100, 200 or 500 notes only")
